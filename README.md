@@ -88,9 +88,55 @@ module.exports = router
 > directory structure
 - client
   - css
-  -- style.css
+  -- main.css
   - js
   -- main.js
+
+  ## 8. Build out styles in main.css
+  ```css
+  .poll {
+  width: 400px;
+  padding: 1.5rem;
+  margin: 50px;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+```css
+.poll__title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.poll__option-fill{
+    width: 50%;
+    height: 10px;
+    background-color: #ddd;
+}
+
+.poll__option:hover{
+    cursor: pointer;
+}
+
+.poll__option:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+
+
+.poll__option--selected .poll__option-fill{
+    background-color: #009578;
+}
+.poll__option--selected .poll__option-info{
+    font-weight: bold;
+}
+.poll__option-info{
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 0;
+    font-size: 0.85rem;
+}
+```
 
 
 
