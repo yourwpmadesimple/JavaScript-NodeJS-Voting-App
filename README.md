@@ -102,7 +102,7 @@ module.exports = router
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
-```css
+
 .poll__title{
     font-weight: bold;
     font-size: 1.5rem;
