@@ -93,7 +93,7 @@ module.exports = router
   -- main.js
 
   ## 8. Build out styles in main.css
-  ```css
+  ```
   .poll {
   width: 400px;
   padding: 1.5rem;
