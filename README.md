@@ -91,10 +91,9 @@ module.exports = router
   -- main.css
   - js
   -- main.js
-
-  ## 8. Build out styles in main.css
-  ```
-  .poll {
+## 8. Build out styles in main.css
+```css
+.poll {
   width: 400px;
   padding: 1.5rem;
   margin: 50px;
@@ -137,7 +136,3 @@ module.exports = router
     font-size: 0.85rem;
 }
 ```
-
-
-
-
