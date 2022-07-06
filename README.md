@@ -136,3 +136,41 @@ module.exports = router
     font-size: 0.85rem;
 }
 ```
+
+## 9. Inject HTML
+```JavaScript
+class Poll {
+    constructor(root, title) {
+        this.root = root
+        this.selected = sessionStorage.getItem('poll-selected')
+        this.endpoint = "http://localhost:3000/poll"
+
+        this.root.insertAdjacentHTML('afterbegin', `
+        <div class="poll__title">${ title }</div>
+        `)
+
+        this._refresh()
+    }
+
+    async _refresh() {
+        const response = await fetch(this.endpoint)
+        const data = await response.json()
+
+        console.log(data)
+    }
+}
+
+const p = new Poll(document.querySelector('.poll'), "Which do you prefer?")
+console.log(p)
+```
+
+## 10. Enable CORS
+> directory server > routes > Router.js
+```JavaScript
+// Enable CORS Middleware
+router.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+
+    next()
+})
+```

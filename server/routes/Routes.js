@@ -6,6 +6,13 @@ const router = express.Router()
 const dataFile = path.join(__dirname, "../data.json")
 router.use(express.urlencoded({ extended: true }))
 
+// Enable CORS Middleware
+router.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+
+    next()
+})
+
 router.get('/', (req, res) => {
     res.send("Index Route")
 })
